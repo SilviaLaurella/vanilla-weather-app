@@ -1,9 +1,9 @@
-body {
-  font-family: "Roboto", sans-serif;
-}
 .container {
+  font-family: "Roboto", sans-serif;
+
   max-width: 600px;
-  margin: 35px auto;
+
+  margin: 5px auto;
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 7px;
@@ -14,6 +14,12 @@ h1 {
   font-weight: bold;
   color: #272142;
 }
+small {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 .todayValues {
   list-style: none;
 }
@@ -23,22 +29,31 @@ h1 {
 .wind {
   color: #a9a6b3;
 }
-.percentile {
+#percentile {
   color: #f65282;
 }
-.windValue {
+#windValue {
   color: #f65282;
 }
 .day {
   color: #a9a6b3;
 }
-.temperature {
-  font-size: 35px;
-  color: #272142;
+#unit {
+  color: #f65282;
+}
+.simbol {
+  color: #f65282;
 }
 .gif {
   font-size: 35px;
 }
 .unit {
   color: #272142;
+}
+#temperature {
+  font-size: 35px;
+  color: #272142;
+}
+#description {
+  text-transform: capitalize;
 }
