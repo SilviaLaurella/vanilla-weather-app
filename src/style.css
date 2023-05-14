@@ -35,7 +35,7 @@ small {
 #windValue {
   color: #f65282;
 }
-.day {
+#date {
   color: #a9a6b3;
 }
 #unit {
@@ -56,4 +56,5 @@ small {
 }
 #description {
   text-transform: capitalize;
+  color: #a9a6b3;
 }
