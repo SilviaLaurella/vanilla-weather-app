@@ -29,9 +29,22 @@ small {
 .wind {
   color: #a9a6b3;
 }
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  color: #9db2bf;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+  color: #9db2bf;
+}
 #percentile {
   color: #f65282;
 }
+
 #windValue {
   color: #f65282;
 }
