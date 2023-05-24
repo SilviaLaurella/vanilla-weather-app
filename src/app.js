@@ -21,37 +21,6 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-            <div class="weather-forecast-date">${day}</div>
-            <div class="image">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt=""
-                width="36"
-              />
-            </div>
-            <div class="weather-forecast-temperature">
-              <span class="weather-forecast-temperature-max"> 18°</span>
-              <span class="weather-forecast-temperature-min"> 12°</span>
-            </div>
-          </div>`;
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-function getForecast(coordinates) {
-  let apiKey = "73a00877081bd43422bdee0f3022beb5";
-  let forecastApiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
-  axios.get(forecastApiUrl).then(displayForecast);
-}
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -71,12 +40,10 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  getForecast(response.data.coord);
 }
 
 function search(city) {
-  let apiKey = "17ad6e67aa629189f73b053634668b20";
+  let apiKey = "5354b60afda2b7800186c06153932396";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -89,5 +56,3 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-displayForecast();
