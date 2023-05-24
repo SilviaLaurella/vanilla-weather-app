@@ -42,20 +42,29 @@ small {
   color: #9db2bf;
 }
 #percentile {
-  color: #f65282;
+  color: #9a208c;
 }
-
+#button {
+  background-color: #9a208c;
+  border-color: #9a208c;
+  transition: all 150ms ease-in-out;
+}
+#button:hover {
+  background-color: white;
+  cursor: pointer;
+  color: #9a208c;
+}
 #windValue {
-  color: #f65282;
+  color: #9a208c;
 }
 #date {
   color: #a9a6b3;
 }
 #unit {
-  color: #f65282;
+  color: #9a208c;
 }
 .simbol {
-  color: #f65282;
+  color: #9a208c;
 }
 #gif {
   font-size: 35px;
